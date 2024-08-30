@@ -1,8 +1,8 @@
 import React from 'react';
-import Navbar from '../../components/Navbar/Navbar';
-import Sidebar from '../../components/Sidebar/Sidebar';
+import Navbar from '../components/Navbar/Navbar';
+import Sidebar from '../components/Sidebar/Sidebar';
 import { Box, useBreakpointValue } from '@chakra-ui/react';
-
+import { Outlet } from 'react-router-dom';
 export default function AdminHome() {
   const sidebarWidth = useBreakpointValue({ base: 'full', md: '60' });
 
@@ -15,7 +15,9 @@ export default function AdminHome() {
         p={4}
       >
         <Navbar />
-        {/* Main content goes here */}
+        <Box p={4}>
+          <Outlet />  {/* Renders the routed page content */}
+        </Box>
       </Box>
     </Box>
   );
