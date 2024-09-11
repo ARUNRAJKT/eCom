@@ -1,22 +1,28 @@
-import React from 'react';
-import { Flex, Text, Button, Spacer, useBreakpointValue } from '@chakra-ui/react';
-import { useLocation } from 'react-router-dom';
+import React from "react";
+import {
+  Flex,
+  Text,
+  Button,
+  Spacer,
+  useBreakpointValue,
+} from "@chakra-ui/react";
+import { useLocation } from "react-router-dom";
 
 export default function Navbar() {
   const location = useLocation();
 
   // Map routes to page titles
   const pageTitles = {
-    '/': 'Dashboard',
-    '/users': 'Users',
-    '/products': 'Products',
-    '/orders': 'Orders',
-    '/admins': 'Admin',
+    "/dashboard": "Dashboard",
+    "/users": "Users",
+    "/products": "Products",
+    "/orders": "Orders",
+    "/admins": "Admin",
     // Add more routes as needed
   };
 
   // Get the current page title based on the current route
-  const currentPage = pageTitles[location.pathname] || 'Home';
+  const currentPage = pageTitles[location.pathname] || "Home";
   const loggedInUser = "John Doe"; // Replace with actual user data
 
   // Determine whether to show the current page title based on the screen size

@@ -1,26 +1,26 @@
-import React from 'react';
+import React from "react";
 import {
   FaHome,
   FaProductHunt,
   FaShoppingCart,
   FaUserTie,
-  FaUsers 
-} from 'react-icons/fa';
+  FaUsers,
+} from "react-icons/fa";
 
 export const LinkItems = [
-  { name: 'Home', url: '/', icon: <FaHome /> },
-  { name: 'Products', url: '/products', icon: <FaProductHunt /> },
-  { name: 'Orders', url: '/orders', icon: <FaShoppingCart /> },
-  { name: 'Admins', url: '/admins', icon: <FaUserTie /> },
-  { name: 'Users', url: '/users', icon: <FaUsers /> },
+  { name: "Dashboard", url: "/dashboard", icon: <FaHome /> },
+  { name: "Products", url: "/products", icon: <FaProductHunt /> },
+  { name: "Orders", url: "/orders", icon: <FaShoppingCart /> },
+  { name: "Admins", url: "/admins", icon: <FaUserTie /> },
+  { name: "Users", url: "/users", icon: <FaUsers /> },
 ];
 
 export const orderStatusList = [
-  { name: 'Reject', value: 'rejected' },
-  { name: 'Processing', value: 'processing' },
-  { name: 'Confirmed', value: 'confirmed' },
-  { name: 'Shipped', value: 'shipped' },
-  { name: 'Delivered', value: 'delivered' },
+  { name: "Reject", value: "rejected" },
+  { name: "Processing", value: "processing" },
+  { name: "Confirmed", value: "confirmed" },
+  { name: "Shipped", value: "shipped" },
+  { name: "Delivered", value: "delivered" },
 ];
 
 export const domain = process.env.REACT_APP_BACKEND_HOST;
