@@ -16,38 +16,37 @@ import {
 } from '@chakra-ui/react';
 
 export default function DashboardCard() {
-    const { orders, pending_orders, delivered_orders, total_revenue } =
-        useOrderContext();
-    const cardList = [
-        {
-            title: 'Total Orders',
-            value: orders.length,
-            icon: FaShoppingCart,
-            color: 'brown.500',
-        },
-        {
-            title: 'Pending Orders',
-            value: pending_orders.length,
-            icon: MdPendingActions,
-            color: 'red.500',
-        },
-        {
-            title: 'Delivered Orders',
-            value: delivered_orders.length,
-            icon: MdDeliveryDining,
-            color: 'blue.500',
-        },
-        {
-            title: 'Total Revenue',
-            value: formatPrice(total_revenue),
-            icon: FaRupeeSign,
-            color: 'green.500',
-        },
-    ];
+  
+    // const cardList = [
+    //     {
+    //         title: 'Total Orders',
+    //         value: orders.length,
+    //         icon: FaShoppingCart,
+    //         color: 'brown.500',
+    //     },
+    //     {
+    //         title: 'Pending Orders',
+    //         value: pending_orders.length,
+    //         icon: MdPendingActions,
+    //         color: 'red.500',
+    //     },
+    //     {
+    //         title: 'Delivered Orders',
+    //         value: delivered_orders.length,
+    //         icon: MdDeliveryDining,
+    //         color: 'blue.500',
+    //     },
+    //     {
+    //         title: 'Total Revenue',
+    //         value: formatPrice(total_revenue),
+    //         icon: FaRupeeSign,
+    //         color: 'green.500',
+    //     },
+    // ];
 
     return (
         <SimpleGrid minChildWidth='250px' spacing={5} mb={5}>
-            {cardList.map((card, index) => {
+            {/* {cardList.map((card, index) => {
                 const { title, value, icon, color } = card;
                 return (
                     <Flex
@@ -72,7 +71,7 @@ export default function DashboardCard() {
                         </Square>
                     </Flex>
                 );
-            })}
+            })} */}
         </SimpleGrid>
     );
 }
