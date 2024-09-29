@@ -1,35 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
-import { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import Home from './pages/Home';
+// import ProductsPage from './pages/ProductsPage';
+// import ProductDetailPage from './pages/ProductDetailPage';
+// import About from './pages/About';
+// import Login from './pages/Login';
+// import RegisterPage from './pages/RegisterPage';
+// import ForgotPassword from './pages/ForgotPassword';
+// import Shipping from './pages/Shipping';
+// import Payment from './pages/Payment';
+// import NotFound from './pages/NotFound';
+// import PrivateRouter from "./PrivateRouter";
+
+// import Toast from "./components/Toast";
+// import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
-  // Corrected destructuring of useState
-  const [data, setData] = useState();
-
-  // Corrected useEffect and fetch syntax
-  useEffect(() => {
-    fetch("http://localhost:4000/products")
-      .then((res) => res.json()) // Parse the JSON response
-      .then((data) => {
-        setData(data); // Set the data in state
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-      });
-  }, []); // Empty dependency array to run the effect only once
-
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-    
-          {data ? JSON.stringify(data) : "Loading..."} {/* Conditional rendering */}
-     
-      </header>
-    </div>
+    <>
+      {/* <Toast/> */}
+      <Router>
+        <Routes>
+        	<Route path="/" element={<Home />} />
+        	{/* <Route path="/products" element={<ProductsPage />} />
+        	<Route path="/product/:id" element={<ProductDetailPage />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/shipping" element={<PrivateRouter><Shipping /></PrivateRouter>} />
+          <Route path="/payment" element={<PrivateRouter><Payment /></PrivateRouter>} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<RegisterPage />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="*" element={<NotFound />} /> */}
+        </Routes>
+      </Router>  
+    </>
   );
 }
 
