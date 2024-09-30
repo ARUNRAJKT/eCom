@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Home from './pages/Home';
-// import ProductsPage from './pages/ProductsPage';
+import ProductsPage from './pages/ProductsPage';
 // import ProductDetailPage from './pages/ProductDetailPage';
 // import About from './pages/About';
 // import Login from './pages/Login';
@@ -22,8 +22,8 @@ function App() {
       <Router>
         <Routes>
         	<Route path="/" element={<Home />} />
-        	{/* <Route path="/products" element={<ProductsPage />} />
-        	<Route path="/product/:id" element={<ProductDetailPage />} />
+        	 <Route path="/products" element={<ProductsPage />} />
+        {/*	<Route path="/product/:id" element={<ProductDetailPage />} />
           <Route path="/about" element={<About />} />
           <Route path="/shipping" element={<PrivateRouter><Shipping /></PrivateRouter>} />
           <Route path="/payment" element={<PrivateRouter><Payment /></PrivateRouter>} />
